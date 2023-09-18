@@ -1,0 +1,16 @@
+---
+title: "About"
+image: profile.jpg
+about:
+  template: jolla
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com
+    - icon: github
+      text: Github
+      href: https://github.com
+
+---
+
+Greetings traveler, my name is terps and I will be your guide today. Blogging about stuff I don't know so I can get to know it better 😅. Blog mainly focused on machine learning / deep learning and drawing insights from data. Interested in meta-skills: decision making & problem solving. Thanks for visiting you can reach me at admin@terpsfi.xyz if you wanna chat.

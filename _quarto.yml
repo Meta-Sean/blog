@@ -1,0 +1,24 @@
+project:
+  type: website
+
+website:
+  title: "Machine Learner"
+  navbar:
+    right:
+      - about.qmd
+      - icon: github
+        href: https://github.com/Meta-Sean
+      - icon: twitter
+        href: https://twitter.com
+format:
+  html:
+    theme: 
+      light: flatly
+      dark: darkly
+    css: styles.css
+
+execute:
+  freeze: auto
+
+
+
