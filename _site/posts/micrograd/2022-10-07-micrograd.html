@@ -209,10 +209,30 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="a-blog-implementation-of-andrej-karpathys-micrograd-video" class="level3">
 <h3 class="anchored" data-anchor-id="a-blog-implementation-of-andrej-karpathys-micrograd-video">A blog implementation of Andrej Karpathy’s <a href="https://youtu.be/VMj-3S1tku0">micrograd video</a></h3>
 </section>
-<section id="work-in-progress-will-continually-add-to-this-blog" class="level3">
-<h3 class="anchored" data-anchor-id="work-in-progress-will-continually-add-to-this-blog">Work in progress will continually add to this blog</h3>
-<p><a id="content"></a> <strong>Content:</strong> ### 1. <a href="#1">Derivative of a function</a> ### 2. <a href="#2">Core Value Object</a> ### 3. <a href="#3">Manual Backpropagation</a> ### 4. <a href="#4">Backward function</a> ### 5. <a href="#5">More operations</a> ### 6. <a href="#6">Pytorch</a></p>
-<p><a id="1"></a> # <a href="#content">Lets get an intuitive understanding of what a derivative is</a></p>
+<section id="contents" class="level1">
+<h1>Contents:</h1>
+<section id="derivative-of-a-function" class="level3">
+<h3 class="anchored" data-anchor-id="derivative-of-a-function">1. <a href="#1">Derivative of a function</a></h3>
+</section>
+<section id="core-value-object" class="level3">
+<h3 class="anchored" data-anchor-id="core-value-object">2. <a href="#2">Core Value Object</a></h3>
+</section>
+<section id="manual-backpropagation" class="level3">
+<h3 class="anchored" data-anchor-id="manual-backpropagation">3. <a href="#3">Manual Backpropagation</a></h3>
+</section>
+<section id="backward-function" class="level3">
+<h3 class="anchored" data-anchor-id="backward-function">4. <a href="#4">Backward function</a></h3>
+</section>
+<section id="more-operations" class="level3">
+<h3 class="anchored" data-anchor-id="more-operations">5. <a href="#5">More operations</a></h3>
+</section>
+<section id="pytorch" class="level3">
+<h3 class="anchored" data-anchor-id="pytorch">6. <a href="#6">Pytorch</a></h3>
+<p><a id="1"></a></p>
+</section>
+</section>
+<section id="lets-get-an-intuitive-understanding-of-what-a-derivative-is" class="level1">
+<h1><a href="#content">Lets get an intuitive understanding of what a derivative is</a></h1>
 <div class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#basic imports</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
@@ -220,7 +240,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>matplotlib inline</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Lets use a simple quadratic function as an example <br> <br> ## <span class="math inline">\(f(x) = 3x^2 - 4x + 5\)</span></p>
+<p>Lets use a simple quadratic function as an example</p>
+<section id="fx-3x2---4x-5" class="level2">
+<h2 class="anchored" data-anchor-id="fx-3x2---4x-5"><span class="math inline">\(f(x) = 3x^2 - 4x + 5\)</span></h2>
 <div class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f(x):</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">3</span><span class="op">*</span>x<span class="op">**</span><span class="dv">2</span> <span class="op">-</span> <span class="dv">4</span><span class="op">*</span>x <span class="op">+</span> <span class="dv">5</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -302,7 +324,11 @@ slope 0.9999999999976694</code></pre>
 </div>
 </div>
 <p>Hopefully this has helped build an inuitive sense of what this derivative is telling you about the function, but now we want to move to neural networks, which will be massive mathmatical expressions, so we need some structures to maintain these expressions, so we will build out a value object that can keep track of state and allow us to do expressions</p>
-<p><a id="2"></a> # <a href="#content">Core Value Object</a></p>
+<p><a id="2"></a></p>
+</section>
+</section>
+<section id="core-value-object-1" class="level1">
+<h1><a href="#content">Core Value Object</a></h1>
 <div class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Value:</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    </span>
@@ -408,15 +434,12 @@ slope 0.9999999999976694</code></pre>
 </div>
 </div>
 <p>Lets recap: - we are able to build out mathematical expressions using + and * - Added and tracked grad so we can calculate and update this state later when we do backpropagtion - Forward pass that produces output L and visualized - Now we want to do backpropagation</p>
-<p><a id="3"></a> # <a href="#content">Manual Backpropagation</a></p>
-<p>Lets manually nudge the variable a and manually calculate the derivative of L with respect to a, lets create a gating function lol so we don’t pollute the global scope. We can do this for each variable to calculate their derivative with respect to L</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://i.imgur.com/c53qrkN.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">image.png</figcaption><p></p>
-</figure>
-</div>
+<p><a id="3"></a></p>
 </section>
+<section id="manual-backpropagation-1" class="level1">
+<h1><a href="#content">Manual Backpropagation</a></h1>
+<p>Lets manually nudge the variable a and manually calculate the derivative of L with respect to a, lets create a gating function lol so we don’t pollute the global scope. We can do this for each variable to calculate their derivative with respect to L</p>
+<p><img src="https://i.imgur.com/c53qrkN.png" class="img-fluid"></p>
 <section id="l-d-f" class="level3">
 <h3 class="anchored" data-anchor-id="l-d-f"><span class="math inline">\(L = d * f\)</span></h3>
 </section>
@@ -477,6 +500,7 @@ slope 0.9999999999976694</code></pre>
 </section>
 <section id="if-a-variable-z-depends-on-the-variable-y-which-itself-depends-on-the-variable-x-that-is-y-and-z-are-dependent-variables-then-z-depends-on-x-as-well-via-the-intermediate-variable-y.-in-this-case-the-chain-rule-is-expressed-as" class="level3">
 <h3 class="anchored" data-anchor-id="if-a-variable-z-depends-on-the-variable-y-which-itself-depends-on-the-variable-x-that-is-y-and-z-are-dependent-variables-then-z-depends-on-x-as-well-via-the-intermediate-variable-y.-in-this-case-the-chain-rule-is-expressed-as">If a variable z depends on the variable y, which itself depends on the variable x (that is, y and z are dependent variables), then z depends on x as well, via the intermediate variable y. In this case, the chain rule is expressed as</h3>
+</section>
 </section>
 <section id="fracdzdx-fracdzdy-fracdydx" class="level1">
 <h1><span class="math inline">\(\frac{dz}{dx} = \frac{dz}{dy} * \frac{dy}{dx}\)</span></h1>
@@ -609,12 +633,7 @@ slope 0.9999999999976694</code></pre>
 <pre><code>-7.286496</code></pre>
 </div>
 </div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://blog.liang2.tw/2015Talk-DeepLearn-CNN/pics/external/cs231n_note_neuron.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">image.png</figcaption><p></p>
-</figure>
-</div>
+<p><img src="https://blog.liang2.tw/2015Talk-DeepLearn-CNN/pics/external/cs231n_note_neuron.png" class="img-fluid"></p>
 <p>For our model of neurons we have input axis and these synapses that have weights on them so the w’s are the weights and then the synapse interacts with the input multiplicatively so what flows to the cell body of this neuron is w times x but there’s multiple inputs so there’s many w times x’s flowing into the cell body, the cell body also has some bias which is a sort of trigger happiness of this neuron, making it more or less prone to firing. Then we take it through an activation function which is generally some kinda of squashing function like a sigmoid or tanh. Lets go over an example of a tanh activation function</p>
 <div class="cell" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>plt.plot(np.arange(<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>, <span class="fl">0.2</span>), np.tanh(np.arange(<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>, <span class="fl">0.2</span>)))<span class="op">;</span> plt.grid()<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -735,7 +754,11 @@ slope 0.9999999999976694</code></pre>
 </div>
 </div>
 <p>Nice!, we have manually used backpropagation to calculate our gradients, now lets implement a backward function for each operation</p>
-<p><a id="4"></a> # <a href="#content">Backward Function</a></p>
+<p><a id="4"></a></p>
+</section>
+</section>
+<section id="backward-function-1" class="level1">
+<h1><a href="#content">Backward Function</a></h1>
 <p>Lets add a backward methods to our Value object for each operation that we can call to calculate our gradients for us using backpropagation</p>
 <div class="cell" data-execution_count="35">
 <div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Value:</span>
@@ -830,12 +853,7 @@ slope 0.9999999999976694</code></pre>
 </div>
 </div>
 <p>Awesome, this works great, we never want to call backward() on a node before we have calculated the gradients for everthing after it since it depends on their gradients. We will use topological sort which lays the graph such that all the edges go only from left to right.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://miro.medium.com/max/1400/1*uMg_ojFXts2WZSjcZe4oRQ.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">img.png</figcaption><p></p>
-</figure>
-</div>
+<p><img src="https://miro.medium.com/max/1400/1*uMg_ojFXts2WZSjcZe4oRQ.png" class="img-fluid"></p>
 <div class="cell" data-execution_count="42">
 <div class="sourceCode cell-code" id="cb54"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="co"># inputs x1,x2</span></span>
 <span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a>x1 <span class="op">=</span> Value(<span class="fl">2.0</span>, label<span class="op">=</span><span class="st">'x1'</span>)</span>
@@ -1056,7 +1074,10 @@ slope 0.9999999999976694</code></pre>
 <p><img src="2022-10-07-micrograd_files/figure-html/cell-52-output-1.svg" class="img-fluid"></p>
 </div>
 </div>
-<p><a id="6"></a> # <a href="#content">Pytorch comparison</a></p>
+<p><a id="6"></a></p>
+</section>
+<section id="pytorch-comparison" class="level1">
+<h1><a href="#content">Pytorch comparison</a></h1>
 <div class="cell" data-execution_count="52">
 <div class="sourceCode cell-code" id="cb67"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch</span>
 <span id="cb67-2"><a href="#cb67-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -1097,12 +1118,7 @@ w1 1.0000002567688737</code></pre>
 <pre><code>0.7071066904050358</code></pre>
 </div>
 </div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://cs231n.github.io/assets/nn1/neural_net2.jpeg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">img.png</figcaption><p></p>
-</figure>
-</div>
+<p><img src="https://cs231n.github.io/assets/nn1/neural_net2.jpeg" class="img-fluid"></p>
 <div class="cell" data-scrolled="true" data-execution_count="131">
 <div class="sourceCode cell-code" id="cb73"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span>
 <span id="cb73-2"><a href="#cb73-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -1283,7 +1299,6 @@ w1 1.0000002567688737</code></pre>
 </div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
