@@ -12,7 +12,6 @@
     "theme: minty\n",
     "image: \"image.jpg\"\n",
     "highlight-style: atom-one\n",
-    "url: https://colab.research.google.com\n",
     "---"
    ]
   },
