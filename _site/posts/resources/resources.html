@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Terps">
+<meta name="dcterms.date" content="2023-12-10">
 
-<title>Machine Learner - blog</title>
+<title>Machine Learner - Machine Learner 📚</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -18,26 +20,24 @@ ul.task-list{list-style: none;}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -57,48 +57,18 @@ ul.task-list{list-style: none;}
     "search-submit-button-title": "Submit"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
-      <a class="navbar-brand" href="./index.html">
+      <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Machine Learner</span>
   </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -107,7 +77,7 @@ ul.task-list{list-style: none;}
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html">About</a>
+    <a class="nav-link" href="../../about.html">About</a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/Meta-Sean"><i class="bi bi-github" role="img">
@@ -131,112 +101,104 @@ ul.task-list{list-style: none;}
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">blog</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Machine Learner 📚</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">jupyter</div>
+              </div>
+                  </div>
   </div>
     
   
   <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Terps </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">December 10, 2023</p>
+      </div>
+    </div>
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="jupyter">jupyter <span class="quarto-category-count">(2)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
+<blockquote class="blockquote">
+<p>A collection of resources I found helpful in my programming/ML journey. Will try to continue to update and add better descriptions as time goes on.</p>
+</blockquote>
+<section id="online-courses" class="level2">
+<h2 class="anchored" data-anchor-id="online-courses">Online Courses</h2>
+<ul>
+<li><strong><a href="https://course.fast.ai/">Practical Deep Learning</a></strong>
+<ul>
+<li>Starting off strong, Jeremy Howard is an incredible educator and I can’t recommend this course enough. Not only the is the course material great, but the overall approach to learning/meta-learning is fantastic.</li>
+</ul></li>
+<li><strong><a href="https://www.coursera.org/professional-certificates/google-advanced-data-analytics">Google Advanced Data Analytics Professional Certificate</a></strong>
+<ul>
+<li>Google doesn’t miss on quality, this course takes you zero to one in data science. From foundations to more advanced ML applications, this course will really help you drive home key concepts in an approachable way.</li>
+</ul></li>
+<li><strong><a href="https://huggingface.co/learn">Hugging Face Courses</a></strong>
+<ul>
+<li>Three courses covering NLP, Deep RL, and Audio. Great way to break the cold start problem and get hacking on deep learning.</li>
+</ul></li>
+<li><strong><a href="https://missing.csail.mit.edu/">Missing Semester</a></strong>
+<ul>
+<li>MIT course covering all the tools a program can expect to use and master in the field from the shell, editors, data wrangling, cli, git, debugging, profiling, metaprogramming, security, and cryptography.</li>
+</ul></li>
+</ul>
+</section>
+<section id="websites-and-blogs" class="level2">
+<h2 class="anchored" data-anchor-id="websites-and-blogs">Websites and Blogs</h2>
+<ul>
+<li><strong><a href="https://www.kaggle.com/learn">Kaggle</a></strong>
+<ul>
+<li>Kaggle is not only the premier platform for data science competition, but also has a good library of exercises to brush up on skills.</li>
+</ul></li>
+<li><strong><a href="https://bbycroft.net/llm">LLM Visualization</a></strong>
+<ul>
+<li>Awesome visualization and walkthrough of a GPT LLM.</li>
+</ul></li>
+<li><strong><a href="https://rentry.org/llm-training">The Novice’s LLM Training Guide</a></strong>
+<ul>
+<li>Get up to speed on fine-tuning LLMs.</li>
+</ul></li>
+</ul>
+</section>
+<section id="tools-and-frameworks" class="level2">
+<h2 class="anchored" data-anchor-id="tools-and-frameworks">Tools and Frameworks</h2>
+<ul>
+<li><strong><a href="https://chat.openai.com/">ChatGPT or any LLM assistant</a></strong>
+<ul>
+<li>The amount of value you can get out of modern LLMs is staggering, I don’t even know where to begin, it gives the novice so much leverage. I recommend using it to augment your learning and work not replacing it, really grok its outputs. Using voice chat to have one on one conversations about topics I’m learning really helps reinforce concepts I’m trying to learn.</li>
+</ul></li>
+<li><strong><a href="https://www.zotero.org/">Zotero</a></strong>
+<ul>
+<li>I use Zotero to keep track of research papers that I’m reading or plan to read. Its super handy and allows me to read PDFs on my ipad.</li>
+</ul></li>
+</ul>
+<hr>
+<p><em>Thank you for reading my blog! Much more to come soon. Feel free to connect with me on <a href="twitter.com/terpsfi">Twitter</a>.</em></p>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="jupyter" data-listing-date-sort="1702188000000" data-listing-file-modified-sort="1702253685024" data-listing-reading-time-sort="1.825">
-<div class="thumbnail">
-<p><a href="./posts/resources/resources.html"> <img src="./posts/resources/image.jpg" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/resources/resources.html">
-<h3 class="no-anchor listing-title">
-Machine Learner 📚
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('jupyter'); return false;">
-jupyter
-</div>
-</div>
-<a href="./posts/resources/resources.html">
-<div class="listing-description">
-A collection of resources I found helpful in my programming/ML journey. Will try to continue to update and add better descriptions as time goes on.
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/resources/resources.html">
-<div class="listing-date">
-Dec 10, 2023
-</div>
-<div class="listing-author">
-Terps
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="jupyter" data-listing-date-sort="1663218000000" data-listing-file-modified-sort="1702253628214" data-listing-reading-time-sort="8.025">
-<div class="thumbnail">
-<p><a href="./posts/micrograd/micrograd.html"> <img src="./posts/micrograd/image.jpg" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/micrograd/micrograd.html">
-<h3 class="no-anchor listing-title">
-Micrograd 🔧
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('jupyter'); return false;">
-jupyter
-</div>
-</div>
-<a href="./posts/micrograd/micrograd.html">
-<div class="listing-description">
-Spelled-out intro to neural networks and backpropagation
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/micrograd/micrograd.html">
-<div class="listing-date">
-Sep 15, 2022
-</div>
-<div class="listing-author">
-Terps
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
