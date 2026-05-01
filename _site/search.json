@@ -2,9 +2,23 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "blog",
+    "title": "Hi, I’m Sean 👋",
     "section": "",
-    "text": "Machine Learner 📚\n\n\n\n\n\n\njupyter\n\n\n\n\n\n\n\n\n\nDec 10, 2023\n\n\nTerps\n\n\n\n\n\n\n\n\n\n\n\n\nMicrograd 🔧\n\n\n\n\n\n\njupyter\n\n\n\n\n\n\n\n\n\nSep 15, 2022\n\n\nTerps\n\n\n\n\n\n\nNo matching items"
+    "text": "back at it\n\n\n1 min\n\n\n\nmeta\n\n\n\nQuick check-in after a long quiet stretch.\n\n\n\nMay 1, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMachine Learner 📚\n\n\n3 min\n\n\n\njupyter\n\n\n\n\n\n\n\nDec 10, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMicrograd 🔧\n\n\n9 min\n\n\n\njupyter\n\n\n\n\n\n\n\nSep 15, 2022\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+  },
+  {
+    "objectID": "posts/back-at-it/index.html",
+    "href": "posts/back-at-it/index.html",
+    "title": "back at it",
+    "section": "",
+    "text": "Last post here was December 2023. Long time.\nHonest version of why: writing felt like extra work on top of the actual learning. Turns out you have to write to learn the thing properly, so I’m back.\nWhat I’m spending time on right now:\n\nDistilling Qwen models. Most of my hands-on hours go here.\nKarpathy’s Zero to Hero, picking up where I left off.\nMath Academy in the background, daily.\n\nI’m not going to promise a posting cadence. The bar is “write when there’s something honest to say about what I’m doing.” If you want updates without checking back, the RSS feed is the way.\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Greetings traveler, my name is Sean (a.k.a. terps). I write here to learn out loud, mostly machine learning and deep learning, with side trips into the meta-skills that actually move the needle: decision-making, problem framing, and how to learn fast.\nIf something here is useful, wrong, or sparks an idea, reach me at admin@terpsfi.xyz or @terpsfi.\n\nWhat I’m spending time on\nRight now my hands-on hours go to two places: model distillation, and agent RL / agentic workflows. In the background I’m grinding Math Academy daily so the calculus and linear algebra under all of this stops being a hand-wave.\n\n\nWhy this blog exists\nThe fastest way I know to find the holes in my understanding is to try and explain a thing simply. So this is the public notebook. Half tutorial, half journal, mostly an excuse to keep showing up.\n\n\n\n Back to top"
   },
   {
     "objectID": "posts/resources/resources.html",
@@ -33,13 +47,6 @@
     "title": "Machine Learner 📚",
     "section": "Tools and Frameworks",
     "text": "Tools and Frameworks\n\nChatGPT or any LLM assistant\n\nThe amount of value you can get out of modern LLMs is staggering, I don’t even know where to begin, it gives the novice so much leverage. I recommend using it to augment your learning and work not replacing it, really grok its outputs. Using voice chat to have one on one conversations about topics I’m learning really helps reinforce concepts I’m trying to learn.\n\nZotero\n\nI use Zotero to keep track of research papers that I’m reading or plan to read. Its super handy and allows me to read PDFs on my ipad.\n\n\n\nThank you for reading my blog! Much more to come soon. Feel free to connect with me on Twitter."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "Greetings traveler, my name is terps and I will be your guide today. Blogging about stuff I don’t know so I can get to know it better 😅. Blog mainly focused on machine learning / deep learning and drawing insights from data. Interested in meta-skills: decision making & problem solving. Thanks for visiting you can reach me at admin@terpsfi.xyz if you wanna chat."
   },
   {
     "objectID": "posts/micrograd/micrograd.html",

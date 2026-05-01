@@ -1,0 +1,20 @@
+---
+title: "back at it"
+description: "Quick check-in after a long quiet stretch."
+author: "Sean"
+date: "2026-05-01"
+categories: [meta]
+image: image.png
+---
+
+Last post here was December 2023. Long time.
+
+Honest version of why: writing felt like extra work on top of the actual learning. Turns out you have to write to learn the thing properly, so I'm back.
+
+What I'm spending time on right now:
+
+- Model distillation.
+- Agent RL and agentic workflows.
+- Math Academy in the background, daily.
+
+I'm not going to promise a posting cadence. The bar is "write when there's something honest to say about what I'm doing." If you want updates without checking back, the [RSS feed](/index.xml) is the way.

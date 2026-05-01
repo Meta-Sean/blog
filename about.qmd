@@ -2,15 +2,35 @@
 title: "About"
 image: profile.jpg
 about:
-  template: jolla
+  template: trestles
+  image-shape: round
+  image-width: 14em
   links:
-    - icon: twitter
-      text: Twitter
-      href: https://twitter.com/terpsfi
+    - icon: twitter-x
+      text: X
+      href: https://x.com/terpsfi
     - icon: github
-      text: Github
+      text: GitHub
       href: https://github.com/Meta-Sean
-
+    - icon: braces
+      text: HuggingFace
+      href: https://huggingface.co/Terps
+    - icon: bar-chart
+      text: Kaggle
+      href: https://www.kaggle.com/terpsmeta
+    - icon: envelope
+      text: Email
+      href: mailto:admin@terpsfi.xyz
 ---
 
-Greetings traveler, my name is terps and I will be your guide today. Blogging about stuff I don't know so I can get to know it better 😅. Blog mainly focused on machine learning / deep learning and drawing insights from data. Interested in meta-skills: decision making & problem solving. Thanks for visiting you can reach me at admin@terpsfi.xyz if you wanna chat.
+Greetings traveler, my name is Sean (a.k.a. **terps**). I write here to learn out loud, mostly machine learning and deep learning, with side trips into the meta-skills that actually move the needle: decision-making, problem framing, and how to learn fast.
+
+If something here is useful, wrong, or sparks an idea, reach me at [admin@terpsfi.xyz](mailto:admin@terpsfi.xyz) or [@terpsfi](https://x.com/terpsfi).
+
+### What I'm spending time on
+
+Right now my hands-on hours go to two places: model distillation, and agent RL / agentic workflows. In the background I'm grinding [Math Academy](https://mathacademy.com/) daily so the calculus and linear algebra under all of this stops being a hand-wave.
+
+### Why this blog exists
+
+The fastest way I know to find the holes in my understanding is to try and explain a thing simply. So this is the public notebook. Half tutorial, half journal, mostly an excuse to keep showing up.

@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/back-at-it/index.html",
       "/posts/resources/resources.html",
       "/posts/micrograd/micrograd.html"
     ]

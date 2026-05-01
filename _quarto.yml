@@ -1,24 +1,60 @@
 project:
   type: website
+  output-dir: _site
 
 website:
-  title: "Machine Learner"
+  title: "terps"
+  description: "Notes on machine learning and learning in public."
+  site-url: https://terpsfi.xyz
+  favicon: profile.jpg
+  back-to-top-navigation: true
+  page-navigation: true
+  search:
+    location: navbar
+    type: overlay
+
   navbar:
+    pinned: true
+    left:
+      - href: index.qmd
+        text: Blog
+      - href: about.qmd
+        text: About
     right:
-      - about.qmd
       - icon: github
         href: https://github.com/Meta-Sean
-      - icon: twitter
-        href: https://twitter.com/terpsfi
+        aria-label: GitHub
+      - icon: twitter-x
+        href: https://x.com/terpsfi
+        aria-label: X
+      - icon: rss
+        href: index.xml
+        aria-label: RSS
+
+  page-footer:
+    left: "© 2022–2026 Sean Huckabee"
+    center:
+      - text: "Built with [Quarto](https://quarto.org)"
+    right:
+      - icon: github
+        href: https://github.com/Meta-Sean
+      - icon: twitter-x
+        href: https://x.com/terpsfi
+
 format:
   html:
-    theme: 
-      light: flatly
+    theme:
+      light: cosmo
       dark: darkly
     css: styles.css
+    toc: true
+    code-copy: true
+    code-overflow: wrap
+    anchor-sections: true
+    smooth-scroll: true
+    link-external-newwindow: true
+    link-external-icon: true
+    fig-cap-location: bottom
 
 execute:
   freeze: auto
-
-
-
