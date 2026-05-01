@@ -1,5 +1,5 @@
 ---
-title: "Hi, I'm Sean 👋"
+title: "Hi, I'm terps 👋"
 subtitle: "Notes from my machine-learning practice. What I'm reading, building, and figuring out in public."
 listing:
   contents: posts

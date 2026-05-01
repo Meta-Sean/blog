@@ -23,7 +23,7 @@ about:
       href: mailto:admin@terpsfi.xyz
 ---
 
-Greetings traveler, my name is Sean (a.k.a. **terps**). I write here to learn out loud, mostly machine learning and deep learning, with side trips into the meta-skills that actually move the needle: decision-making, problem framing, and how to learn fast.
+Greetings traveler, my name is **terps**. I write here to learn out loud, mostly machine learning and deep learning, with side trips into the meta-skills that actually move the needle: decision-making, problem framing, and how to learn fast.
 
 If something here is useful, wrong, or sparks an idea, reach me at [admin@terpsfi.xyz](mailto:admin@terpsfi.xyz) or [@terpsfi](https://x.com/terpsfi).
 
